@@ -1,0 +1,110 @@
+#jumbotron{
+    
+    padding-block-start: 40px;
+padding-block-end: 40px;
+padding-bottom: -10px;
+   text-align: center;
+   width: 80%;
+}
+
+#myModal{
+    text-align: center;
+}
+
+#botonInfo{
+   align-items: center;
+}
+
+#containerForm{
+background-color: lightgrey;
+margin-block-start: 50px;
+margin-block-end: 90px;
+padding-block-start: 30px;
+padding-block-end: 50px;
+border-radius: 30px;
+
+}
+
+#contenidoForo{
+    background-color:honeydew;
+    margin-block-start: 50px;
+    margin-block-end: 30px;
+    padding-block-start: 30px;
+    padding-block-end: 50px;
+    
+}
+
+#form{
+    margin-left: 250px;
+}
+
+#tablaComent{
+    padding-block-start: 50px;
+}
+
+#comentarios{
+    background-color:honeydew;
+    margin-block-start: 50px;
+    margin-block-end: 30px;
+    padding-block-start: 30px;
+    padding-block-end: 50px;
+    
+}
+
+#tablaSerie{
+    margin-block-start: 50px;
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-block-end: 40px;
+    
+}
+
+.img{
+    width: 350px;
+    height: 200px;
+    
+  }
+
+  #botonVer{
+      margin: 25px;
+      
+  }
+  #tablaSerie{
+      text-align: justify;
+  }
+
+  #fotoCarousel{
+    width: 190px;
+    height: 100px;
+  }
+
+ 
+#acordeon{
+    margin-block-start: 50px;
+    margin-block-end: 80px;
+    padding-block-end: 50px;
+    padding-block-start: 30px;
+    border-radius: 15px;
+    
+}
+
+#formInterior{
+    padding-left: 310px;
+} 
+
+.radio-inline{
+    padding-right: 20px;
+}
+
+#radioOption{
+    margin-left: 50px
+}
+
+
+
+
+
+
+
+ 
+

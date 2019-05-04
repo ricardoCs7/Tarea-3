@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>Contactar</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="custom.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body style="  background-color:honeydew;">
+
+    <nav class="navbar navbar-expand-sm bg-info navbar-dark" id="navbar4">
+        <a class="navbar-brand" href="#">
+            <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/movie-time-889225.png" alt="logo"
+                style="width:50px;">
+        </a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item ">
+                    <a class="nav-link" href="index.html">Inicio </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="series.html">Series </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link " href="peliculas.html">Películas </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="foro.html">Foro</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Contactar</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="suscripcion.html">Suscribirse</a>
+                        <a class="dropdown-item" href="contactar.html">Contactar Staff</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Ingrese búsqueda">
+                <button class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container" id="acordeon">
+        <div class="container">
+            <h2 style="text-align: center">Contactar al Staff</h2>
+            <br>
+            <p></p>
+            <p>Despliega la opción que deseas realiar.</p>
+            <br>
+            <div id="accordion">
+
+                <div class="card">
+                    <div class="card-header">
+                        <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                            Sugerir Película
+                        </a>
+                    </div>
+                    <div id="collapseOne" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <!--Formulario 1-->
+                            <form action="/action_page.php">
+                                <div class="container class row" id="formInterior">
+                                    <div class="form-group col-7">
+                                        <label for="NombrePeli">Título de la Película:</label>
+                                        <input type="text" name="" id="" class="form-control" required>
+                                    </div>
+                                    <div class="form-group col-7">
+                                        <label for="año">Año:</label>
+                                        <input type="number" name="año" min="1600" max="2019" id="año"
+                                            class="form-control" required placeholder="1600-2019">
+                                    </div>
+                                    <div class="form-group col-7">
+                                        <label for="sel1">Categoría:</label>
+                                        <select class="form-control" id="sel1" required>
+                                            <option data-hidden="true">Selecionar...</option>
+                                            <option>Suspenso</option>
+                                            <option>Acción</option>
+                                            <option>Comedia</option>
+                                            <option>Terror</option>
+                                            <option>Infantil</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-7">
+                                        <label for="">Reseña (Opcional):</label>
+                                        <textarea class="form-control" name="" id="" rows="3"></textarea>
+                                    </div>
+                                    <div class="form-group col-7">
+                                        <label for="">Email:</label>
+                                        <input type="email" class="form-control" name="" id=""
+                                            aria-describedby="emailHelpId" placeholder="ejemplo@gmail.com">
+                                        <small id="emailHelpId" class="form-text text-muted">Se le enviará un email
+                                            respondiendo a su solicitud.</small>
+                                    </div>
+                                    <div class="form-group col-7">
+                                        <label for="">Contraseña:</label>
+                                        <input type="password" class="form-control" name="pass" id="pass"
+                                            placeholder="Contraseña de su cuenta Usuario" required>
+                                    </div>
+                                    <div class="col-7" style="margin-left: 150px">
+                                        <button class="btn btn-success my-2 my-sm-0" type="submit">Enviar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                            Sugerir Serie
+                        </a>
+                    </div>
+                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <!--Formulario 2-->
+                            <form action="/action_page.php">
+                                <div class="container class row" id="formInterior">
+                                    <div class="form-group col-7">
+                                        <label for="NombrePeli">Título de la Serie:</label>
+                                        <input type="text" name="" id="" class="form-control" required>
+                                    </div>
+                                    <div class="form-group col-7">
+                                        <label for="año">Año:</label>
+                                        <input type="number" name="año" min="1600" max="2019" id="año"
+                                            class="form-control" required placeholder="1600-2019">
+                                    </div>
+                                    <div class="form-group col-7">
+                                        <label for="sel1">Categoría:</label>
+                                        <select class="form-control" id="sel1" required>
+                                            <option data-hidden="true">Selecionar...</option>
+                                            <option>Suspenso</option>
+                                            <option>Acción</option>
+                                            <option>Comedia</option>
+                                            <option>Terror</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-7">
+                                        <label for="tem">Número Temporadas:</label>
+                                        <input type="number" name="temp" min="1" max="100" id="temp"
+                                            class="form-control" required placeholder="1-100">
+                                    </div>
+                                    <div class="form-group col-7">
+                                        <label for="">Reseña (Opcional):</label>
+                                        <textarea class="form-control" name="" id="" rows="3"></textarea>
+                                    </div>
+                                    <div class="form-group col-7">
+                                        <label for="">Email:</label>
+                                        <input type="email" class="form-control" name="" id=""
+                                            aria-describedby="emailHelpId" placeholder="ejemplo@gmail.cl">
+                                        <small id="emailHelpId" class="form-text text-muted">Se le enviará un email
+                                            respondiendo a su solicitud.</small>
+                                    </div>
+                                    <div class="form-group col-7">
+                                        <label for="">Contraseña:</label>
+                                        <input type="password" class="form-control" name="pass" id="pass"
+                                            placeholder="Contraseña de su cuenta Usuario" required>
+                                    </div>
+                                    <div class="col-7" style="margin-left: 150px">
+                                        <button class="btn btn-success my-2 my-sm-0" type="submit">Enviar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                            Enviar mensaje / comentario / sugerencia
+                        </a>
+                    </div>
+                    <div id="collapseThree" class="collapse " data-parent="#accordion">
+                        <div class="card-body">
+                            <!--Formulario 3-->
+                            <form action="/action_page.php">
+                                <div class="container class row" id="formInterior">
+                                    <div id="radioOption" >
+                                        <label class="radio-inline" aria-required="false">
+                                            <input type="radio" name="optradio"> Mensaje
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="optradio"> Reclamo
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="optradio"> Sugerencia
+                                        </label>
+                                    </div required>
+
+                                    <br>
+                                    <br>
+                                    <div class="form-group col-7">
+                                        <label for="user">Nombre Usuario:</label>
+                                        <input type="text" name="" id="user" class="form-control" placeholder=""
+                                            required>
+                                    </div>
+                                    <div class="form-group col-7">
+                                        <label for="msg">Ingrese texto:</label>
+                                        <textarea class="form-control" name="msg" id="msg" rows="10" maxlength="301"
+                                            required> </textarea>
+                                        <small id="emailHelpId" class="form-text text-muted">300 caracteres
+                                            máximo.</small>
+                                    </div>
+                                    <div class="form-group col-7">
+                                        <label for="pass">Contraseña</label>
+                                        <input type="password" class="form-control" name="pass" id="pass"
+                                            placeholder="Contraseña cuenta de Usuario" required>
+                                    </div>
+                                    <div class="col-7" style="margin-left: 150px">
+                                        <button class="btn btn-success my-2 my-sm-0" type="submit">Enviar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link " href="suscripcion.html">Anterior</a></li>
+            <li class="page-item"><a class="page-link" href="index.html">1</a></li>
+            <li class="page-item"><a class="page-link" href="series.html">2</a></li>
+            <li class="page-item"><a class="page-link" href="peliculas.html">3</a></li>
+            <li class="page-item"><a class="page-link" href="foro.html">4</a></li>
+            <li class="page-item"><a class="page-link" href="suscripcion.html">5</a></li>
+            <li class="page-item active"><a class="page-link" href="contactar.html">6</a></li>
+            <li class="page-item disabled"><a class="page-link" href="·">Siguiente</a></li>
+        </ul>
+    </div>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

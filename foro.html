@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>Foro</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="custom.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-info navbar-dark" id="navbar2">
+        <a class="navbar-brand" href="#">
+            <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/movie-time-889225.png" alt="logo"
+                style="width:50px;">
+        </a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item ">
+                    <a class="nav-link" href="index.html">Inicio </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="series.html">Series </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link " href="peliculas.html">Películas </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="foro.html">Foro</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Suscribirse/Contactar</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="suscripcion.html">Suscribirse</a>
+                        <a class="dropdown-item" href="contactar.html">Contactar Staff</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Ingrese búsqueda">
+                <button class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container" id="contenidoForo">
+        <h2>Comentarios</h2>
+        <p>Comenta o deja tu opinión acerca de la página o tu experienca en ella para que nuestro Staff
+            pueda leerlas:</p><br>
+        <form action="/action_page.php" id="form">
+
+            <div class="form-group col-8">
+                <label for="user">Usuario:</label>
+                <input type="text" name="name[]" id="" class="form-control" required>
+            </div>
+            <div class="form-group col-8">
+                <label for="">Mensaje:</label>
+                <textarea class="form-control " name="name[]" id="mensaje" required rows="6"></textarea>
+            </div>
+            <div>
+                <button  id="botoncito" class="btn btn-success col-3" type="button" value="Insert" onclick="InsertIntoTable()"
+                    style="margin-left: 190px">Aceptar</button>
+            </div>
+        </form>
+
+
+        <div class="container" id="tablaComent">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Usuario</th>
+                        <th>Mensaje</th>
+                    </tr>
+                </thead>
+                <tbody id="TableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+    <div class="container mt-3" id="comentarios">
+
+        <div class="media border p-3">
+            <img src="https://www.mountsinaitheology.com/img_avatar2.png" alt="John Doe"
+                class="mr-3 mt-3 rounded-circle" style="width:80px;">
+            <div class="media-body">
+                <h4>Johnny Bravo <small><i>Posted on February 09, 2019</i></small></h4>
+                <p>Para mí la mejor serie es Dark, por sus suspenso y su complejidad que te hace pensar en cada capítulo
+                    de la serie.</p>
+                <p>También, podrian agregar la Rosa de Guadalupe, la mejor serie de la vida.</p>
+                <div class="media p-3">
+                    <img src="https://www.herok12.com/wp-content/themes/heropowered/assets/img/avatar-student.png"
+                        alt="Jane Doe" class="mr-3 mt-3 rounded-circle" style="width:65px;">
+                    <div class="media-body">
+                        <h4>Féñííthàx <small><i>Posted on May 05, 2019</i></small></h4>
+                        <p>Dark es impresionante su complejidad, aunque tiene un cierto parecido a Stranger Things, por
+                            como se da el comienzo; la desaparición de uno de los protagonistas, además de ser un niño
+                            también.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="media border p-3">
+            <img src="http://www.ivendario.com/home/static/img/avatars/woman.png" alt="John Doe"
+                class="mr-3 mt-3 rounded-circle" style="width:80px;">
+            <div class="media-body">
+                <h4>Anna Bel <small><i>Posted on March 19, 2019</i></small></h4>
+                <p>Detective Conan debe ser el anime con mas personajes secundiaros; aun en emisión con más capítulos,
+                    más de 900 caps. y aún ni está cerca de llegar a su fin, pero es infancia pura.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+    <script>
+        var names = document.getElementsByName('name[]');
+
+        function InsertIntoTable() {
+            var TableRow = "<tr></tr>";
+            for (key = 0; key < names.length; key++)
+                TableRow = TableRow.substring(0, TableRow.length - 5) + "<td>" + names[key].value + "</td>" + TableRow.substring(TableRow.length - 5);
+            var TrElement = document.createElement("tr");
+            TrElement.innerHTML = TableRow;
+            document.getElementById("TableBody").appendChild(TrElement);
+            document.getElementById("form").reset();
+
+            document.getElementById("botoncito").click
+            alert("Comentario Añadido a la tabla")
+
+        }
+    </script>
+
+
+
+
+
+
+    <div class="container">
+        <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link " href="peliculas.html">Anterior</a></li>
+            <li class="page-item"><a class="page-link" href="index.html">1</a></li>
+            <li class="page-item"><a class="page-link" href="series.html">2</a></li>
+            <li class="page-item"><a class="page-link" href="peliculas.html">3</a></li>
+            <li class="page-item active"><a class="page-link" href="foro.html">4</a></li>
+            <li class="page-item"><a class="page-link" href="suscripcion.html">5</a></li>
+            <li class="page-item"><a class="page-link" href="contactar.html">6</a></li>
+            <li class="page-item"><a class="page-link" href="suscripcion.html">Siguiente</a></li>
+        </ul>
+    </div>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+
+
+</html>

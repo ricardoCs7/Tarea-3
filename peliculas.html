@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>Películas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="custom.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-info navbar-dark" id="navbar4">
+        <a class="navbar-brand" href="#">
+            <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/movie-time-889225.png" alt="logo"
+                style="width:50px;">
+        </a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item ">
+                    <a class="nav-link" href="index.html">Inicio </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="series.html">Series </a>
+                </li>
+                <li class="nav-item active ">
+                    <a class="nav-link " href="peliculas.html">Películas </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="foro.html">Foro</a>
+                </li>
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Suscribirse/Contactar</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="suscripcion.html">Suscribirse</a>
+                        <a class="dropdown-item" href="contactar.html">Contactar Staff</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Ingrese búsqueda">
+                <button class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="table-responsive-sm" id="tablaSerie">
+        <h2>Películas Dispobibles</h2>
+        <p>Selecciona la película que deseas ver:</p>
+        <table class="table table-light table-striped">
+            <thead style="text-align: center">
+                <tr>
+                    <th>Película</th>
+                    <th>Nombre / Sinopsis</th>
+                    <th>Ver Película</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <img class="img" src="https://cdn.forbes.com.mx/2019/03/avengers-endgame-special.jpg">
+                    </td>
+                    <td> <strong> Avengers: Endgame</strong>
+                        <p></p>
+                        <p>El grave curso de los acontecimientos puestos en marcha por Thanos, quien destruyó la mitad
+                            del universo y fracturó las filas de los Vengadores, obligará a los héroes vengadores
+                            sobrevivientes a tomar una decisión final en la gran conclusión de las 22 películas de
+                            Marvel Studios.</p>
+                    </td>
+                    <td><button id="botonVer" type="button" class="btn btn-success"> Ver</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="img"
+                            src="https://cdn1-www.comingsoon.net/assets/uploads/2019/03/toy-story-4-international-poster-e1553699595677.jpeg">
+                    </td>
+                    <td> <strong>Toy Story 4</strong>
+                        <p></p>
+                        <p>Woody siempre ha confiado en su lugar en el mundo y que su prioridad es cuidar a su niño, ya
+                            sea Andy o Bonnie. Pero cuando Bonnie agrega un nuevo juguete reacio llamado Forky a su
+                            habitación, una aventura por carretera junto a viejos y nuevos amigos le mostrará a Woody lo
+                            grande que puede ser el mundo para un juguete.</p>
+                    </td>
+                    <td><button id="botonVer" type="button" class="btn btn-success"> Ver</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="img"
+                            src="data:image/jpeg;base64,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">
+                    </td>
+                    <td> <strong>El Rey León (2019)</strong>
+                        <p></p>
+                        <p>Remake en Live Acition de la clásica película de Disney con el mismo nombre.</p>
+                    </td>
+                    <td><button id="botonVer" type="button" class="btn btn-success"> Ver</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="img" src="http://ivanderblog.com/wp-content/uploads/2019/01/American-History-X.jpg">
+                    </td>
+                    <td> <strong>American History X</strong>
+                        <p></p>
+                        <p>Tras ser liberado de la cárcel, un antiguo neonazi trata de evitar que su hermano menor siga
+                            sus pasos en la senda del odio. </p>
+                    </td>
+                    <td><button id="botonVer" type="button" class="btn btn-success"> Ver</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="img"
+                            src="https://occ-0-987-990.1.nflxso.net/dnm/api/v6/0DW6CdE4gYtYx8iy3aj8gs9WtXE/AAAABR_6wEhTckiGuewFroeqrvlX0gnUWOGwqMijU5gIKbFLrxldu5ATV06XIy_PNHSHEcqoJA6zqxpsolx_tfDsFzofTZAHvwPT.jpg?r=c92">
+                    </td>
+                    <td> <strong>Un Juego Contra El Destino</strong>
+                        <p></p>
+                        <p>En un centro de detención juvenil, un consejero decide transformar a los prisioneros a su
+                            cargo en un equipo de fútbol americano para enseñarles sobre el autoestima y la
+                            responsabilidad social, pero se enfrenta a la oposición de los entrenadores de las
+                            preparatorias que no quieren que sus jugadores se enfrenten a los criminales en el campo de
+                            juego.</p>
+                    </td>
+                    <td><button id="botonVer" type="button" class="btn btn-success"> Ver</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="container">
+        <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link " href="series.html">Anterior</a></li>
+            <li class="page-item"><a class="page-link" href="index.html">1</a></li>
+            <li class="page-item"><a class="page-link" href="series.html">2</a></li>
+            <li class="page-item active"><a class="page-link" href="peliculas.html">3</a></li>
+            <li class="page-item"><a class="page-link" href="foro.html">4</a></li>
+            <li class="page-item"><a class="page-link" href="suscripcion.html">5</a></li>
+            <li class="page-item"><a class="page-link" href="contactar.html">6</a></li>
+            <li class="page-item"><a class="page-link" href="foro.html">Siguiente</a></li>
+        </ul>
+    </div>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
